@@ -1,0 +1,26 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of CMS software: Joomla. Create users and show how Joomla manages web sites for a client. Also implement the working of core features of Joomla. Compare it with other CMS like schoology/Moodle.
+
+CATEGORY: Content Management System (CMS)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Joomla CMS installation and configuration
+- User management in Joomla
+- Content creation and management
+- Joomla core features
+- Comparison with other CMS platforms
+
+DELIVERABLES:
+- Joomla installation
+- User creation and role management
+- Website demonstration
+- Core features implementation
+- Comparison document with Schoology/Moodle
+
+TOOLS REQUIRED:
+- Web server (Apache/Nginx)
+- PHP 7.4+
+- MySQL/MariaDB
+- Joomla CMS package

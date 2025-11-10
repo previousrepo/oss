@@ -1,0 +1,8 @@
+Question 31: Create a LAMP Stack container and host a web application of your own
+
+This demonstrates:
+- Complete LAMP stack setup
+- Custom PHP web application
+- MySQL database integration
+- Apache configuration
+- Multi-container orchestration

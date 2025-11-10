@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: lamp_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: webapp
+      MYSQL_USER: webuser
+      MYSQL_PASSWORD: webpass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - lamp_network
+
+  php-apache:
+    build: .
+    container_name: lamp_apache
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: mysql
+      DB_NAME: webapp
+      DB_USER: webuser
+      DB_PASS: webpass
+    networks:
+      - lamp_network
+
+volumes:
+  mysql_data:
+
+networks:
+  lamp_network:
+    driver: bridge

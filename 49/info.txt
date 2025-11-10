@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Create a web application with simple web page containing login details and create a docker image.
+
+CATEGORY: Docker + Web Application
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Web application development
+- Login functionality
+- Docker containerization
+- Image creation
+
+DELIVERABLES:
+- Web application with login
+- Dockerfile
+- Built Docker image
+- Running container
+
+TOOLS REQUIRED:
+- Docker
+- Web framework
+- HTML/CSS/JavaScript

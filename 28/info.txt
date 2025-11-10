@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of online Bug Tracking/management: Jira. Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare it with other Bug tracking tool. How bug tracking improves the quality of code.
+
+CATEGORY: Bug Tracking System
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration + Analysis
+
+KEY CONCEPTS:
+- Jira setup and usage
+- Bug identification and tracking
+- Jira workflow and features
+- Quality improvement through bug tracking
+
+DELIVERABLES:
+- Jira project setup
+- Three identified bugs with types
+- Bug tracking workflow demonstration
+- Comparison and analysis document
+
+TOOLS REQUIRED:
+- Jira account (Atlassian)
+- Open source project for analysis
+- Web browser

@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Write a Docker File to pull the Ubuntu with open jdk and write any java application.
+
+CATEGORY: Docker + Java
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Dockerfile creation
+- Base image selection
+- Java application containerization
+- Multi-stage builds (optional)
+
+DELIVERABLES:
+- Dockerfile with Ubuntu + OpenJDK
+- Java application
+- Built Docker image
+- Running container demonstration
+
+TOOLS REQUIRED:
+- Docker
+- Java application code
+- Text editor

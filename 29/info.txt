@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate the use for code review: review board tools with tuleap (trial) or gitea.
+
+CATEGORY: Code Review Tools
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Review Board setup
+- Code review workflow
+- Integration with Tuleap or Gitea
+- Collaborative code review process
+
+DELIVERABLES:
+- Review Board installation
+- Code review demonstration
+- Integration with Tuleap/Gitea
+- Workflow documentation
+
+TOOLS REQUIRED:
+- Review Board
+- Tuleap or Gitea
+- Python, web server
+- Sample code repository

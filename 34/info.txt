@@ -1,0 +1,25 @@
+PROBLEM STATEMENT:
+Demonstrate use of bug tracking tool/any foss tool and create the docker image of that tool. Push that image. Run the docker container from recently created image and run that docker container. Push that image.
+
+CATEGORY: Docker Containerization
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker image creation
+- Dockerfile writing
+- Docker Hub push/pull
+- Container deployment
+- FOSS tool containerization
+
+DELIVERABLES:
+- Dockerfile for bug tracking tool
+- Built Docker image
+- Pushed image to Docker Hub
+- Running container demonstration
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Docker Hub account
+- Bug tracking tool (MantisBT, Bugzilla, etc.)

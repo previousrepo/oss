@@ -1,0 +1,8 @@
+Question 33: Create & Demonstrate the containers of a particular distro and show all Docker Compose file fields
+
+This demonstrates:
+- All Docker Compose fields and options
+- Multi-service orchestration
+- Networks, volumes, and dependencies
+- Environment configuration
+- Health checks and restart policies

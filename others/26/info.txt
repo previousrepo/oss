@@ -1,0 +1,7 @@
+Question 26: Create a simple web form to insert the records in mysql database
+
+This demonstrates:
+- PHP web application with MySQL integration
+- HTML form for data insertion
+- Docker Compose with PHP, MySQL, and Nginx
+- Database connectivity and CRUD operations

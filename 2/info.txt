@@ -1,0 +1,25 @@
+PROBLEM STATEMENT:
+Demonstrate to use of Version Control System (Git offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users Compare it with hg.
+
+CATEGORY: Version Control System (Git + GitHub)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Git with remote repository (GitHub)
+- Push and pull operations
+- Remote collaboration
+- Forking and branching
+- Comparison with Mercurial (hg)
+
+DELIVERABLES:
+- GitHub repository with multiple contributors
+- Demonstration of push/pull operations
+- Fork and branch examples
+- Written comparison between Git and Mercurial
+
+TOOLS REQUIRED:
+- Git
+- GitHub account
+- SSH keys or personal access token
+- Text editor

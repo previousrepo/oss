@@ -1,0 +1,26 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of FTP and Telnet. (on centos/rpm based OS VM/container) Show the imp steps and file name of configurations. Put the Pub folder available for access to all.
+
+CATEGORY: Network Services Configuration
+DIFFICULTY: Beginner
+TYPE: Practical Configuration
+
+KEY CONCEPTS:
+- FTP server setup on CentOS
+- Telnet server configuration on RPM-based OS
+- Public folder sharing
+- Service configuration files
+
+DELIVERABLES:
+- FTP server configuration on CentOS
+- Telnet server setup
+- Public folder access demonstration
+- Configuration file documentation
+
+TOOLS REQUIRED:
+- CentOS/RHEL/Fedora
+- vsftpd
+- telnet-server
+- Text editor
+
+NOTE: Telnet is insecure; SSH is recommended for production use.

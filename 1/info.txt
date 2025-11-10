@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate to use of Version Control System (Git offline: on local machine with multiple user). Create multiple users and usage with team leader role and coder roles. Demonstrate code merge, fork (branching) and code diff amongst the users Compare it with svn.
+
+CATEGORY: Version Control System (Git)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Git local repository setup
+- Multiple user simulation
+- Branching and merging
+- Code diff operations
+- Comparison with SVN
+
+DELIVERABLES:
+- Git repository with multiple branches
+- Demonstration of merge operations
+- Code diff examples
+- Written comparison between Git and SVN
+
+TOOLS REQUIRED:
+- Git
+- Text editor
+- Linux/Unix terminal

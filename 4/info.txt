@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate to use of Version Control System (hg mercurial offline: on local machine with multiple user). Create multiple users and usage with team leader role and coder roles. Demonstrate code merge, fork (branching) and code diff amongst the users Compare it with svn.
+
+CATEGORY: Version Control System (Mercurial)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Mercurial (hg) local repository
+- Multiple user simulation
+- Branching and merging in Mercurial
+- Code diff operations
+- Comparison with SVN
+
+DELIVERABLES:
+- Mercurial repository with branches
+- Merge demonstrations
+- Diff examples
+- Written comparison between Mercurial and SVN
+
+TOOLS REQUIRED:
+- Mercurial (hg)
+- Text editor
+- Linux/Unix terminal

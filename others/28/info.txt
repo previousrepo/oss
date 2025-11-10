@@ -1,0 +1,7 @@
+Question 28: Write a Docker File to pull the Ubuntu with OpenJDK and write any Java application
+
+This demonstrates:
+- Multi-stage Docker build
+- Ubuntu base image with OpenJDK
+- Java application compilation and execution
+- Dockerfile best practices

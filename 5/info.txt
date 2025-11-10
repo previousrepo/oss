@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate to use of Version Control System (Hg mercurial offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users Compare it with hg.
+
+CATEGORY: Version Control System (Mercurial + Remote)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Mercurial with remote repository
+- Push and pull operations
+- Remote collaboration with Mercurial
+- Branching in distributed environment
+- Self-comparison note: This appears to be comparing hg with itself (likely meant to compare with Git)
+
+DELIVERABLES:
+- Mercurial repository with remote
+- Push/pull demonstrations
+- Branch and merge examples
+- Comparison documentation
+
+TOOLS REQUIRED:
+- Mercurial (hg)
+- Bitbucket account (supports Mercurial) or hg-git extension
+- Text editor

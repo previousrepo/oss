@@ -1,0 +1,331 @@
+# Docker Compose file demonstrating ALL fields
+
+version: '3.8'
+
+# 1. SERVICES - Define containers
+services:
+  
+  # Web application service
+  web:
+    # Build configuration
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        - APP_VERSION=1.0.0
+        - BUILD_DATE=${BUILD_DATE}
+      cache_from:
+        - web:latest
+      labels:
+        - "com.example.description=Web application"
+    
+    # Or use pre-built image
+    # image: nginx:alpine
+    
+    # Container name
+    container_name: compose-web
+    
+    # Hostname
+    hostname: webserver
+    
+    # Domain name
+    domainname: example.com
+    
+    # Ports mapping
+    ports:
+      - "8080:80"
+      - "8443:443"
+    
+    # Expose ports to linked services
+    expose:
+      - "9000"
+    
+    # Environment variables
+    environment:
+      - NODE_ENV=production
+      - API_URL=http://api:3000
+      - DB_HOST=database
+    
+    # Environment file
+    env_file:
+      - ./web/.env
+      - ./web/.env.production
+    
+    # Volumes
+    volumes:
+      - ./web/html:/usr/share/nginx/html:ro
+      - web-logs:/var/log/nginx
+      - type: bind
+        source: ./web/config
+        target: /etc/nginx/conf.d
+        read_only: true
+    
+    # Networks
+    networks:
+      - frontend
+      - backend
+    
+    # Dependencies
+    depends_on:
+      database:
+        condition: service_healthy
+      api:
+        condition: service_started
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Command override
+    command: nginx -g 'daemon off;'
+    
+    # Entrypoint override
+    # entrypoint: /docker-entrypoint.sh
+    
+    # Working directory
+    working_dir: /app
+    
+    # User
+    user: "1000:1000"
+    
+    # Labels
+    labels:
+      com.example.description: "Web frontend"
+      com.example.department: "Engineering"
+      com.example.version: "1.0"
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # DNS
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    
+    # DNS search
+    dns_search:
+      - example.com
+    
+    # Extra hosts
+    extra_hosts:
+      - "somehost:162.242.195.82"
+      - "otherhost:50.31.209.229"
+    
+    # Links (legacy)
+    # links:
+    #   - database:db
+    
+    # External links
+    # external_links:
+    #   - redis_1
+    
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    
+    # Capabilities
+    cap_add:
+      - NET_ADMIN
+    cap_drop:
+      - ALL
+    
+    # Privileged mode
+    # privileged: true
+    
+    # Devices
+    # devices:
+    #   - "/dev/sda:/dev/xvda:rwm"
+    
+    # PID mode
+    # pid: "host"
+    
+    # IPC mode
+    # ipc: "host"
+    
+    # Network mode
+    # network_mode: "bridge"
+    
+    # MAC address
+    # mac_address: 02:42:ac:11:00:02
+    
+    # Stop grace period
+    stop_grace_period: 30s
+    
+    # Stop signal
+    stop_signal: SIGTERM
+    
+    # Tmpfs
+    tmpfs:
+      - /run
+      - /tmp
+    
+    # Stdin/TTY
+    stdin_open: true
+    tty: true
+    
+    # Ulimits
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
+
+  # API service
+  api:
+    image: node:18-alpine
+    container_name: compose-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_HOST=database
+    volumes:
+      - ./api:/app
+    working_dir: /app
+    command: npm start
+    networks:
+      - backend
+    depends_on:
+      - database
+    restart: on-failure
+
+  # Database service
+  database:
+    image: mysql:8.0
+    container_name: compose-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppass
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Cache service
+  cache:
+    image: redis:alpine
+    container_name: compose-cache
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - cache-data:/data
+
+# 2. NETWORKS - Define networks
+networks:
+  frontend:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br-frontend
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
+          gateway: 172.28.0.1
+    labels:
+      com.example.description: "Frontend network"
+  
+  backend:
+    driver: bridge
+    internal: false
+    attachable: true
+    labels:
+      com.example.description: "Backend network"
+  
+  # External network
+  # external-net:
+  #   external: true
+  #   name: existing-network
+
+# 3. VOLUMES - Define volumes
+volumes:
+  db-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/data/mysql
+      o: bind
+    labels:
+      com.example.description: "Database data"
+  
+  cache-data:
+    driver: local
+    labels:
+      com.example.description: "Cache data"
+  
+  web-logs:
+    driver: local
+  
+  # External volume
+  # external-vol:
+  #   external: true
+  #   name: existing-volume
+
+# 4. CONFIGS - Configuration files (Swarm mode)
+# configs:
+#   my_config:
+#     file: ./config/app.conf
+#   my_other_config:
+#     external: true
+
+# 5. SECRETS - Sensitive data (Swarm mode)
+# secrets:
+#   db_password:
+#     file: ./secrets/db_password.txt
+#   api_key:
+#     external: true
+
+# 6. EXTENSIONS - Reusable configuration
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+x-healthcheck: &default-healthcheck
+  interval: 30s
+  timeout: 10s
+  retries: 3
+  start_period: 40s

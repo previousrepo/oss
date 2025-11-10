@@ -1,0 +1,26 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of NIS and NFS. (on Ubuntu container)
+
+CATEGORY: Docker + Network Services
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- NIS in containers
+- NFS in containers
+- Multi-container networking
+- Shared filesystem in Docker
+
+DELIVERABLES:
+- Ubuntu containers with NIS/NFS
+- Configuration files
+- Service demonstration
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Ubuntu base image
+- NIS and NFS packages
+- Docker networking
+
+NOTE: NIS/NFS in containers requires privileged mode and special networking.

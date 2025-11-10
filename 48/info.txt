@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Create a simple web application using LAMP Stack on docker container.
+
+CATEGORY: Docker + LAMP Stack
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- LAMP stack containerization
+- Apache, MySQL, PHP integration
+- Web application deployment
+- Multi-service container
+
+DELIVERABLES:
+- LAMP stack Docker setup
+- Simple web application
+- Running container
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- PHP, MySQL, Apache
+- Web application code

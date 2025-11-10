@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+        }
+        .dashboard {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .welcome {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .logout-btn {
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .logout-btn:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Dashboard</h1>
+        <p class="welcome">Welcome, {{ username }}!</p>
+        
+        <div class="info-box">
+            <h3>System Information</h3>
+            <p>You are successfully logged in to the application.</p>
+            <p>This is a demo web application running in Docker.</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>Features</h3>
+            <ul>
+                <li>User Authentication</li>
+                <li>Session Management</li>
+                <li>Responsive Design</li>
+                <li>Dockerized Application</li>
+            </ul>
+        </div>
+        
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>

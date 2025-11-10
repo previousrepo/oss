@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of CMS software: "Drupal". Create users and show how Drupal manages contents of web sites for a client. Also implement the working of core features of Drupal. Compare it with other CMS like schoology.
+
+CATEGORY: Content Management System
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Drupal CMS installation and configuration
+- User and content management
+- Drupal core features
+- CMS comparison
+
+DELIVERABLES:
+- Drupal installation
+- User creation and role management
+- Content management demonstration
+- Comparison document
+
+TOOLS REQUIRED:
+- Web server (Apache/Nginx)
+- PHP 7.4+
+- MySQL/PostgreSQL
+- Drupal CMS package

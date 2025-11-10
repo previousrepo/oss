@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate to use of Version Control System (Git offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users, code merge, code diff amongst the users. Compare git with gitea.
+
+CATEGORY: Version Control System (Git + GitHub + Gitea)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Git with GitHub integration
+- Multi-user collaboration
+- Pull, push, fork, branch operations
+- Code merge and diff
+- Comparison with Gitea (self-hosted Git service)
+
+DELIVERABLES:
+- Complete Git workflow demonstration
+- Merge and diff examples
+- Written comparison between Git/GitHub and Gitea
+
+TOOLS REQUIRED:
+- Git
+- GitHub account
+- Optional: Gitea installation for comparison
+- Text editor

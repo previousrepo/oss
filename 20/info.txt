@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of Bug Tracking/management: "YouTrack". Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare code review with Bug tracking process. How bug tracking or code review improves the quality of code.
+
+CATEGORY: Bug Tracking System
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration + Analysis
+
+KEY CONCEPTS:
+- YouTrack setup and usage
+- Bug identification and tracking
+- Code review vs bug tracking
+- Quality improvement analysis
+
+DELIVERABLES:
+- YouTrack installation/setup
+- Three identified bugs with types
+- Bug tracking workflow demonstration
+- Comparison and analysis document
+
+TOOLS REQUIRED:
+- YouTrack (JetBrains)
+- Open source project for analysis
+- Java runtime

@@ -1,0 +1,7 @@
+Question 27: Mount any directory of host system to the container
+
+This demonstrates:
+- Volume mounting from host to container
+- Bind mounts vs named volumes
+- Data persistence
+- File sharing between host and container

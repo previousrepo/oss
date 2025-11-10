@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Create two IPC in two different Docker containers. Push those applications and run to show the communications between two dockers.
+
+CATEGORY: Docker Networking + IPC
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker networking
+- Inter-container communication
+- Socket/IPC programming
+- Container deployment
+
+DELIVERABLES:
+- Two communicating applications
+- Dockerfiles for both
+- Network configuration
+- Communication demonstration
+
+TOOLS REQUIRED:
+- Docker
+- Programming language
+- Docker networking

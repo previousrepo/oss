@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of NIS and NFS. (on ubuntu) Show the imp steps and file name of configurations. Create 5 users and make two groups, demonstrate the NIS and NFS concepts by example on LAN connected linux os.
+
+CATEGORY: Network Services Configuration
+DIFFICULTY: Beginner
+TYPE: Practical Configuration
+
+KEY CONCEPTS:
+- NIS (Network Information Service) setup
+- NFS (Network File System) configuration
+- User and group management across network
+- Shared filesystem demonstration
+
+DELIVERABLES:
+- NIS server and client configuration
+- NFS server and client setup
+- 5 users in 2 groups demonstration
+- Configuration file documentation
+
+TOOLS REQUIRED:
+- Ubuntu Linux (multiple machines or VMs)
+- NIS packages
+- NFS packages
+- Network connectivity

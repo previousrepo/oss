@@ -1,0 +1,7 @@
+Question 30: Write a C program to create singly linked list and containerize it
+
+This demonstrates:
+- C programming with linked list implementation
+- GCC compilation in Docker
+- Alpine Linux for minimal image size
+- Containerizing C applications

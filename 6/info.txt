@@ -1,0 +1,26 @@
+PROBLEM STATEMENT:
+Demonstrate to use of Version Control System (SVN offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users, code merge, code diff amongst the users Compare git with SVN.
+
+CATEGORY: Version Control System (SVN)
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- SVN (Subversion) setup
+- Multi-user collaboration with SVN
+- Branching and merging in SVN
+- Code diff operations
+- Comparison with Git
+
+DELIVERABLES:
+- SVN repository demonstration
+- Branch and merge examples
+- Diff operations
+- Written comparison between Git and SVN
+
+TOOLS REQUIRED:
+- Apache Subversion (SVN)
+- SVN server setup
+- Text editor
+
+NOTE: GitHub doesn't natively support SVN anymore. Use local SVN server or services like Apache SVN.

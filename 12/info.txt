@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Create of RPM packages. (multiple modules/code packaging of c/cpp). Pull or take any FOSS project and one feature or remove bug and then create the package on suitable OS Compare RPM packaging with Debian packaging.
+
+CATEGORY: Package Management (RPM)
+DIFFICULTY: Beginner
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- RPM package creation for C/C++
+- Compilation and packaging
+- SPEC file for compiled code
+- RPM vs DEB comparison
+
+DELIVERABLES:
+- RPM package for C/C++ application
+- SPEC file
+- Installation demonstration
+- Comparison document
+
+TOOLS REQUIRED:
+- RPM-based Linux
+- rpmbuild, gcc/g++
+- FOSS C/C++ project

@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of online Project Management tool & communication tools "slack with ASANA" for managing projects. Demonstrate the one foss project for Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare asana with phabricator.
+
+CATEGORY: Project Management + Communication
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Asana and Slack integration
+- Team communication and project management
+- Automated notifications
+- Collaborative workflows
+- Tool comparison
+
+DELIVERABLES:
+- Asana + Slack integration setup
+- Communication workflow demonstration
+- Task management with notifications
+- Comparison document
+
+TOOLS REQUIRED:
+- Asana account
+- Slack workspace
+- Integration setup

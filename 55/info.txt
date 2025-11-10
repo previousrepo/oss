@@ -1,0 +1,210 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of FTP and Telnet. (on Ubuntu container)
+
+CATEGORY: Docker + Network Services
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+=== WHAT IS FTP? ===
+
+FTP (File Transfer Protocol) is a network protocol for transferring files between computers.
+
+**How FTP Works:**
+1. Client connects to FTP server on port 21 (control port)
+2. Client authenticates (username/password or anonymous)
+3. Client requests file operations (list, download, upload)
+4. Server opens data connection (port 20 or random port)
+5. Files are transferred
+6. Connection closes
+
+**FTP Modes:**
+- **Active Mode**: Server initiates data connection to client
+- **Passive Mode**: Client initiates both control and data connections
+
+**Anonymous FTP:**
+- No password required
+- Username: "anonymous" or "ftp"
+- Limited access (usually read-only)
+- Public file sharing
+
+**vsftpd (Very Secure FTP Daemon):**
+- Most popular FTP server on Linux
+- Secure, fast, and stable
+- Configuration file: `/etc/vsftpd.conf`
+
+=== WHAT IS TELNET? ===
+
+Telnet is a network protocol for remote terminal access to another computer.
+
+**How Telnet Works:**
+1. Client connects to server on port 23
+2. Client sends username and password (in plain text!)
+3. Server authenticates user
+4. Client gets remote shell access
+5. All commands and responses sent over network
+6. Session ends when user logs out
+
+**Why Telnet is Insecure:**
+- Everything sent in **plain text** (no encryption)
+- Passwords visible to anyone monitoring network
+- Commands and data can be intercepted
+- Vulnerable to man-in-the-middle attacks
+
+**Modern Alternative: SSH**
+- Encrypted communication
+- Secure authentication
+- Port 22 (instead of 23)
+- Same functionality as Telnet but secure
+
+=== WHY USE CONTAINERS FOR FTP/TELNET? ===
+
+**Benefits:**
+1. **Isolation**: Services run in isolated environment
+2. **Portability**: Same setup works anywhere
+3. **Easy cleanup**: Delete container, everything gone
+4. **No system pollution**: Doesn't affect host system
+5. **Version control**: Dockerfile tracks configuration
+
+**Container vs VM:**
+- Container: Shares host kernel, lightweight, fast startup
+- VM: Full OS, heavy, slow startup
+
+=== DOCKER NETWORKING BASICS ===
+
+**Port Mapping:**
+```
+-p 2121:21
+   ↑    ↑
+   |    └─ Container port (FTP inside container)
+   └────── Host port (access from your computer)
+```
+
+When you access `localhost:2121`, Docker forwards to container's port 21.
+
+**Why Different Ports?**
+- Port 21 might be used on host
+- Multiple containers can't use same host port
+- Avoids conflicts
+
+=== CONFIGURATION FILES ===
+
+**vsftpd.conf (FTP Server):**
+```
+listen=YES                  # Run as standalone daemon
+anonymous_enable=YES        # Allow anonymous login
+anon_root=/srv/ftp         # Anonymous user's root directory
+no_anon_password=YES       # No password for anonymous
+```
+
+**xinetd (Super-server for Telnet):**
+- xinetd manages multiple network services
+- Starts telnetd when connection comes to port 23
+- Configuration: `/etc/xinetd.d/telnet`
+
+=== HOW THE CONTAINER WORKS ===
+
+**Dockerfile Breakdown:**
+
+1. **Base Image**: `FROM ubuntu:22.04`
+   - Start with Ubuntu 22.04
+
+2. **Install Services**: `apt-get install vsftpd telnetd xinetd`
+   - vsftpd: FTP server
+   - telnetd: Telnet server
+   - xinetd: Service manager for telnet
+
+3. **Create Public Folder**: `/srv/ftp/pub`
+   - Anonymous users can access this
+   - chmod 755: Read and execute for everyone
+
+4. **Configure FTP**: Edit `/etc/vsftpd.conf`
+   - Enable anonymous access
+   - Set root directory
+   - Disable password requirement
+
+5. **Configure Telnet**: Create `/etc/xinetd.d/telnet`
+   - Enable telnet service
+   - Set server binary path
+   - Configure socket type
+
+6. **Startup Script**: `/start.sh`
+   - Start vsftpd service
+   - Start xinetd service
+   - Keep container running (tail -f /dev/null)
+
+7. **Expose Ports**: `EXPOSE 21 23`
+   - Port 21: FTP
+   - Port 23: Telnet
+
+=== TESTING WITHOUT CLIENT SOFTWARE ===
+
+**Option 1: curl (for FTP)**
+```bash
+curl ftp://localhost:2121/
+```
+- curl is pre-installed on most systems
+- Can access FTP without ftp client
+
+**Option 2: Browser (for FTP)**
+- Open: `ftp://localhost:2121`
+- Browser has built-in FTP support
+
+**Option 3: Verify Ports**
+```bash
+docker exec container_name ss -tuln | grep ':21\|:23'
+```
+- Check if services are listening on ports
+
+=== SECURITY WARNING ===
+
+**Never use Telnet in production!**
+- Passwords sent in plain text
+- All data unencrypted
+- Easy to intercept
+
+**Use SSH instead:**
+- Encrypted communication
+- Secure authentication
+- Same functionality
+- Industry standard
+
+**FTP Security:**
+- Use FTPS (FTP over SSL/TLS)
+- Or use SFTP (SSH File Transfer Protocol)
+- Or use modern alternatives (SCP, rsync, cloud storage)
+
+=== REAL-WORLD USAGE ===
+
+**FTP:**
+- Legacy systems
+- Public file distribution
+- Embedded devices
+- Replaced by: HTTP, HTTPS, cloud storage
+
+**Telnet:**
+- Network device configuration (routers, switches)
+- Legacy system access
+- Testing network connectivity
+- Replaced by: SSH
+
+KEY CONCEPTS:
+- FTP: File transfer protocol (port 21)
+- Telnet: Remote terminal access (port 23)
+- vsftpd: FTP server software
+- xinetd: Service manager
+- Docker port mapping
+- Container networking
+- Security implications
+
+DELIVERABLES:
+- Ubuntu container with FTP/Telnet
+- Configuration files
+- Service demonstration
+- Port mapping setup
+- Testing methods
+
+TOOLS REQUIRED:
+- Docker
+- Ubuntu base image
+- vsftpd, telnetd, xinetd packages
+- curl or browser for testing

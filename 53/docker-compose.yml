@@ -1,0 +1,29 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: lamp-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myapp
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - lamp-net
+
+  apache-php:
+    image: webdevops/php-apache:8.1
+    container_name: lamp-app
+    depends_on:
+      - mysql
+    volumes:
+      - ./app:/app
+    ports:
+      - "8080:80"
+    networks:
+      - lamp-net
+
+networks:
+  lamp-net:
+
+volumes:
+  db_data:

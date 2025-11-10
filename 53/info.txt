@@ -1,0 +1,25 @@
+this is not wworking yet...
+
+PROBLEM STATEMENT:
+Pull the LAMP Stack container from docker hub and host a web application of your own.
+
+CATEGORY: Docker + LAMP Stack
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker Hub image pulling
+- LAMP stack usage
+- Web application deployment
+- Container customization
+
+DELIVERABLES:
+- Pulled LAMP container
+- Custom web application
+- Running application
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Docker Hub
+- Web application code (PHP)

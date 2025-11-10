@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of Project Management tool: "Open Atrium" for managing. Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare it with other Project Management tool.
+
+CATEGORY: Project Management
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Open Atrium installation and configuration
+- Project planning and task management
+- Team collaboration features
+- Comparison with other PM tools
+
+DELIVERABLES:
+- Open Atrium setup
+- Project management demonstration
+- Team collaboration examples
+- Comparison document
+
+TOOLS REQUIRED:
+- Drupal (Open Atrium is Drupal-based)
+- Web server, PHP, MySQL
+- Open Atrium distribution

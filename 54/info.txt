@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Create a Docker image of simple web application from using HTTP web server at port 5000 in host.
+
+CATEGORY: Docker + Web Server
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- HTTP web server containerization
+- Port mapping to 5000
+- Simple web application
+- Image creation
+
+DELIVERABLES:
+- Web application with HTTP server
+- Dockerfile
+- Built Docker image
+- Running container on port 5000
+
+TOOLS REQUIRED:
+- Docker
+- HTTP server (Python SimpleHTTPServer, Node.js, etc.)
+- HTML files

@@ -1,0 +1,64 @@
+LAB POE – FULL EXPERIMENT LIST (ALL QUESTIONS)
+
+Simple problem statements (Beginners-B)
+1. Demonstrate to use of Version Control System (Git offline: on local machine with multiple user). Create multiple users and usage with team leader role and coder roles. Demonstrate code merge, fork (branching) and code diff amongst the users Compare it with svn. (on answer sheet)
+2. Demonstrate to use of Version Control System (Git offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users Compare it with hg. (on answer sheet)
+3. Demonstrate to use of Version Control System (Git offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users, code merge, code diff amongst the users. Compare git with gitea. (on answer sheet)
+4. Demonstrate to use of Version Control System (hg mercurial offline: on local machine with multiple user). Create multiple users and usage with team leader role and coder roles. Demonstrate code merge, fork (branching) and code diff amongst the users Compare it with svn. (on answer sheet)
+5. Demonstrate to use of Version Control System (Hg mercurial offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users Compare it with hg. (on answer sheet)
+6. Demonstrate to use of Version Control System (SVN offline and connect to github account). Create multiple users and usage with team leader role and coder roles. Demonstrate code pull and push, fork (branching) amongst the users, code merge, code diff amongst the users Compare git with SVN. (on answer sheet)
+7. Demonstrate the use/features of online Bug Tracking/Issue Tracking "mantis". Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet ) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare all FOSS bug tracking tools.
+8. Demonstrate the use/features of online Bug Tracking/Issue Tracking "BugZilla". Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet ) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare it with other online Bug trackingtool. How bug tracking improves the quality of code (on answer sheet).
+9. Development of contribution to existing Open Source Software (on line upload of its git/svn repository with your valid login) (Language: java/pyth/perl/c/cpp/etc ). Pull to your github the Open Source Software and contribute in terms removing error/bug or adding feature to it. Upload the contributed code your repository as well original FOSS.
+10. Demonstrate the use/features of CMS software: Joomla. Crate users and show how Joomla manages web sites for a client. Also implement the working of core features of Joomla. Compare it with other CMS like schoology/Moodle (on answer sheet)
+11. Create of RPM packages. (Multiple modules/code packaging of java). Pull or take any FOSS project and  one feature and then create the package on suitable OS Compare RPM packaging with Debian packaging (on answer sheet)
+12. Create of RPM packages. (multiple modules/code packaging  of c/cpp). Pull or take any FOSS project and  one feature or remove bug and then create the package on suitable OS Compare RPM packaging with Debian packaging (on answer sheet)
+13. Create of Debian packages. (Multiple modules/code packaging  of python). Pull or take any FOSS project and  one feature and then create the package on suitable OS Compare RPM packaging with Debian packaging (on answer sheet)
+14. Create of Debian packages. (multiple modules/code packaging  of java/c/cpp). Pull or take any FOSS project and  one feature and then create the package on suitable OS Compare RPM packaging with Debian packaging (on answer sheet)
+15. Demonstrate the use/features of Project Management tool: “SONARQUBE” for managing projects. Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare it with other Project Management tool (on answer sheet)
+16. Demonstrate the use/features of online Project Management tool: “SONARcloud” for managing projects. Demonstrate the one foss project for code coverage, Detect Bugs & Vulnerabilities, Review Security Hotspots, Track Code Smells & fix your Technical Debt. Show  the Code Quality Metrics & History. Compare it with other Project Management tool (on answer sheet)
+17. Demonstrate the use/features of online Project Management tool: “ASANA” for managing projects. Demonstrate the one foss project for Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare asana with phabricator (on answer sheet)
+18. Demonstrate the use/features of online Project Management tool & communication tools “slack with ASANA” for managing projects. Demonstrate the one foss project for Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare asana with phabricator (on answer sheet)
+19. Demonstrate the use/features of online Project Management tool & communication tools “asana with github” for managing projects. Demonstrate the one foss project for Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare asana with phabricator (on answer sheet)
+20. Demonstrate the use/features of Bug Tracking/management: "YouTrack". Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet ) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare code review with Bug tracking process.. How bug tracking or code review improves the quality of code (on answer sheet).
+21. Demonstrate the use/features of online Bug Tracking/management: "donedone". Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet ) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare code review with Bug tracking process.. How bug tracking or code review improves the quality of code (on answer sheet).
+22. Demonstrate the use/features of CMS software: "Drupal". Crate users and show how Drupal manages contents of web sites for a client. Also implement the working of core features of Drupal. Compare it with other CMS like schoology/(on answer sheet)
+23. Configure and demonstrate the use of FTP and Telnet. (on ubantu) Show the imp steps and file name of configurations. (on answer sheet) Put the Pub folder available for access to all.
+24. Configure and demonstrate the use of NIS and NFS. (on ubantu) Show the imp steps and file name of configurations. (on answer sheet) Create 5 users and  make two groups, demonstrate the NIS and NFS concepts by example on LAN connected linux os.
+25. Configure and demonstrate the use of FTP and Telnet. (on centos/rpm based OS VM/container ) Show the imp steps and file name of configurations. (on answer sheet) Put the Pub folder available for access to all.
+26. Configure and demonstrate the use of NIS and NFS. (on centos/rpm based OS VM/container ) Show the imp steps and file name of configurations. (on answer sheet) Create 5 users and  make two groups, demonstrate the NIS and NFS concepts by example on LAN connected linux os.
+27. Demonstrate the use/features of Project Management tool: “Open Atrium” for managing. Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare it with other Project Management tool (on answer sheet)
+28. Demonstrate the use/features of online Bug Tracking/management: Jira. Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet ) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare it with other Bug trackingtool. How bug tracking improves the quality of code (on answer sheet)
+29. Demonstrate the use for code review :review board tools with tuleap (trial) or gitea
+30. Write a go program to demonstrate feature of go language (any one)
+31. Demonstrate go Tools (any one)
+32. Demonstrate go Applications (any one)
+33. Download the suitable version of kernel/linux code from distro/linux.org and add print statement and compile it and demonstrate the change kernel/print statement added.
+
+Tough problem statements (Expert-E)
+34. Demonstrate use of bug tracking tool/any foss tool and create the docker image  of that tool. Push that image. Run the docker container from recently created image and run that docker container. Push that image.
+35. Write a Docker File to pull the Ubuntu with open jdk and write any java application.
+36. Demonstrate use of bug tracking tool and create the docker image  of that tool. Push that image. Run the docker container from recently created image and run that docker container. Push that image.
+37. Create two applications/socket/IPC in two different docker containers. Push those applications and run to show the communications between two dockers.
+38. Create two applications/socket/IPC  in two different docker containers. Push those applications and run to show the communications between two dockers.
+39. Create two applications/socket/IPC  in two different Docker containers. Push those applications and run to show the communications between two dockers.
+40. Pull the LAMP Stack container from  docker hub and host a web application of your own. Push that image back to repository. Make use of database.
+41. Create a web application with simple web page containing login details and create a docker image of the application.
+42. With the help of Docker-compose deploy the ‘Wordpress’ and ‘Mysql’ container and access the front end of ‘Wordpress’
+43. A.  Create a simple Hello-world python flask application and create the docker image of that Flask application.
+44. Create the ‘nginx’ container from ‘nginx’ image. And create the load balancing so that if we go to tha address of ‘nginx ‘ it can redirect it to the above created applications.
+45. Create a web application with simple web page containing login details and create a docker image.
+46. Run the Docker container from recently created image and run the container at port number 80 in host system.
+47. Write a python program to perform arithmetic operations and create Docker image accordingly.
+48. Create a simple web application using LAMP Stack on docker container.
+49. Create a web application with simple web page containing login details and create a docker image.
+50. Run the Docker container from recently created image and run the container at port number 80 in host system.
+51. Create a simple Hello-world python flask application and create the docker image of that Flask application.
+52. Run the docker container from recently created image and run that docker container to 5000 port of host system.
+53. Pull the LAMP Stack container from  docker hub and host a web application of your own.
+54. Create a Docker image of simple web application from using HTTP web server at port 5000 in host.
+55. Configure and demonstrate the use of FTP and Telnet. (on Ubuntu container )
+56. Configure and demonstrate the use of NIS and NFS. (on Ubuntu container )
+57. Configure and demonstrate the use of FTP and Telnet. (on centOS/redhatcontainer )
+58. Configure and demonstrate the use of NIS and NFS. (on centOS/redhatcontainer)
+

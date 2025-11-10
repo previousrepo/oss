@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: ipc_server
+    volumes:
+      - ipc_socket:/tmp
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: ipc_client
+    depends_on:
+      - server
+    volumes:
+      - ipc_socket:/tmp
+
+volumes:
+  ipc_socket:

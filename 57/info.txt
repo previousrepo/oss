@@ -1,0 +1,25 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of FTP and Telnet. (on centOS/redhat container)
+
+CATEGORY: Docker + Network Services
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- FTP server in CentOS container
+- Telnet server in CentOS container
+- Service configuration in Docker
+- RPM-based container management
+
+DELIVERABLES:
+- CentOS container with FTP/Telnet
+- Configuration files
+- Service demonstration
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- CentOS/RHEL base image
+- vsftpd, telnet-server packages
+
+NOTE: Telnet is insecure; use for educational purposes only.

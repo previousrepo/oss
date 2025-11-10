@@ -1,0 +1,22 @@
+PROBLEM STATEMENT:
+Demonstrate go Applications (any one).
+
+CATEGORY: Go Applications
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Go application development
+- Real-world Go application usage
+- Application architecture in Go
+
+DELIVERABLES:
+- Go application demonstration
+- Application setup and usage
+- Feature showcase
+- Documentation
+
+TOOLS REQUIRED:
+- Go compiler
+- Go application (e.g., Docker, Kubernetes, Hugo, etc.)
+- Terminal

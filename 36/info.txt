@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Demonstrate use of bug tracking tool and create the docker image of that tool. Push that image. Run the docker container from recently created image and run that docker container. Push that image.
+
+CATEGORY: Docker Containerization
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker image creation for bug tracking
+- Docker registry operations
+- Container lifecycle management
+- Image versioning
+
+DELIVERABLES:
+- Dockerfile for bug tracking tool
+- Built and pushed Docker image
+- Running container
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Docker Hub account
+- Bug tracking tool

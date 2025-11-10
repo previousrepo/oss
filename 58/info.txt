@@ -1,0 +1,26 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of NIS and NFS. (on centOS/redhat container)
+
+CATEGORY: Docker + Network Services
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- NIS in CentOS containers
+- NFS in CentOS containers
+- Multi-container networking
+- Shared filesystem in Docker
+
+DELIVERABLES:
+- CentOS containers with NIS/NFS
+- Configuration files
+- Service demonstration
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- CentOS/RHEL base image
+- NIS and NFS packages
+- Docker networking
+
+NOTE: NIS/NFS in containers requires privileged mode and special configuration.

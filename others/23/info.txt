@@ -1,0 +1,231 @@
+Question 23: Create a docker image of simple login form using Flask on port 7000
+
+================================================================================
+WHAT IS FLASK?
+================================================================================
+
+Flask is a lightweight Python web framework - a "microframework". It's minimal
+and gives you the basics to build web applications. You add what you need.
+
+Key Features:
+- Minimal and flexible
+- Built-in development server
+- Template engine (Jinja2)
+- URL routing
+- Session support
+- Easy to learn
+
+Think of it like: Flask = Minimalist toolkit, Django = Complete workshop
+
+================================================================================
+WHAT YOU'RE SEEING IN THE BROWSER
+================================================================================
+
+This is a CUSTOM-BUILT login page:
+- We created everything from scratch
+- HTML templates (login.html, dashboard.html)
+- Login logic in app.py
+- User storage in a Python dictionary
+- Session management with Flask's session
+- Styled with Bootstrap CSS
+
+Everything you see is OUR CODE - Flask just provides the foundation.
+
+================================================================================
+FLASK PROJECT STRUCTURE EXPLAINED
+================================================================================
+
+others/23/
+├── app.py                 ← Main application file (ALL logic here)
+├── templates/             ← HTML files
+│   ├── login.html         ← Login form page
+│   └── dashboard.html     ← After login success page
+├── Dockerfile             ← Docker build instructions
+└── requirements.txt       ← Python dependencies (Flask==2.3.0)
+
+Simple! Just one Python file for all the logic.
+
+================================================================================
+HOW IT WORKS - STEP BY STEP
+================================================================================
+
+1. USER VISITS http://localhost:7000/
+   → app.py checks if user is logged in (session)
+   → If yes: redirect to /dashboard/
+   → If no: redirect to /login/
+
+2. USER SEES LOGIN PAGE
+   → @app.route('/login') function runs
+   → Renders login.html template
+   → Shows Bootstrap-styled form
+
+3. USER ENTERS CREDENTIALS (admin/password)
+   → Form submits via POST request
+   → app.py checks username in users dictionary
+   → Compares password
+   → If valid: stores username in session, redirects to dashboard
+   → If invalid: shows error message
+
+4. USER SEES DASHBOARD
+   → @app.route('/dashboard') function runs
+   → Checks if 'username' exists in session
+   → If yes: renders dashboard.html with username
+   → If no: redirects to login
+
+5. USER CLICKS LOGOUT
+   → @app.route('/logout') function runs
+   → Removes 'username' from session
+   → Redirects back to /login/
+
+================================================================================
+SESSION MANAGEMENT
+================================================================================
+
+Flask uses sessions to remember logged-in users:
+
+session['username'] = 'admin'  ← Store username in session
+username = session['username']  ← Retrieve username
+session.pop('username', None)   ← Remove from session (logout)
+
+Sessions are stored in:
+- Encrypted cookies on the client side
+- Secret key is used for encryption: app.secret_key = 'flask-login-secret-key-7000'
+
+================================================================================
+USER STORAGE (SIMPLE DICTIONARY)
+================================================================================
+
+We store users in a Python dictionary (in-memory):
+
+users = {
+    'admin': 'password',
+    'user': 'user123'
+}
+
+This is SIMPLE but NOT PRODUCTION-READY:
+- Lost when container restarts
+- Passwords in plain text (not secure!)
+- No database
+- Good for learning/demo only
+
+For production, you'd use:
+- Real database (PostgreSQL, MySQL)
+- Password hashing (bcrypt, werkzeug.security)
+- Flask-Login extension
+
+================================================================================
+FLASK ROUTES EXPLAINED
+================================================================================
+
+@app.route('/')
+def index():
+    # Code here runs when user visits http://localhost:7000/
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    # GET: Show the login form
+    # POST: Process the form submission
+
+Routes are like addresses - they map URLs to functions.
+
+================================================================================
+TEMPLATES (HTML FILES)
+================================================================================
+
+Flask uses Jinja2 template engine:
+
+{{ variable }}           ← Display a variable
+{% if condition %}       ← If statement
+{% for item in list %}   ← For loop
+{{ url_for('login') }}   ← Generate URL for a route
+
+Example from login.html:
+{% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+================================================================================
+DOCKER CONTAINERIZATION
+================================================================================
+
+Dockerfile does:
+1. FROM python:3.9-slim        ← Base image with Python
+2. COPY requirements.txt       ← Copy dependencies list
+3. RUN pip install Flask       ← Install Flask
+4. COPY all project files      ← Copy our code (app.py, templates/)
+5. CMD python app.py           ← Start Flask server
+
+Port 7000 is mapped: host:7000 → container:7000
+
+================================================================================
+COMPARISON: FLASK vs DJANGO
+================================================================================
+
+Flask (This Question):
+✓ Simple and minimal (~50 lines)
+✓ Easy to understand
+✓ Full control over everything
+✓ Fast to get started
+✗ No built-in authentication
+✗ No admin panel
+✗ No database ORM
+✗ Build everything yourself
+
+Django (Question 24):
+✓ Built-in authentication
+✓ Admin panel included
+✓ Database ORM
+✓ More features out of the box
+✗ More complex (~100+ lines)
+✗ Steeper learning curve
+✗ More opinionated structure
+
+================================================================================
+FOR LAB EXPLANATION
+================================================================================
+
+When explaining to examiner, say:
+
+"This is a Flask web application with a simple login system. Flask is a 
+lightweight Python microframework - it provides the basics and I build the 
+rest myself.
+
+I created two HTML templates: login.html for the login form and dashboard.html
+for the page after successful login. The templates use Bootstrap for styling.
+
+User credentials are stored in a Python dictionary in memory. When a user logs
+in, I verify the username and password, then store the username in Flask's 
+session (encrypted cookie). The session persists across page visits until 
+logout.
+
+I containerized it with Docker - the Dockerfile installs Flask, copies the 
+application files, and starts the development server on port 7000.
+
+The entire application logic is in one file (app.py) which makes it easy to 
+understand. Flask uses decorators (@app.route) to map URLs to functions."
+
+================================================================================
+KEY CONCEPTS
+================================================================================
+
+1. Routes - Map URLs to functions
+2. Templates - HTML files with dynamic content
+3. Sessions - Remember user across requests
+4. Request/Response - Handle form submissions
+5. Render Template - Convert template to HTML
+
+================================================================================
+SECURITY NOTE
+================================================================================
+
+This is a DEMO application. For production:
+
+1. Use a real database (not dictionary)
+2. Hash passwords (use werkzeug.security.generate_password_hash)
+3. Use HTTPS (not HTTP)
+4. Add CSRF protection
+5. Validate all inputs
+6. Use environment variables for secret key
+7. Add rate limiting for login attempts
+
+================================================================================

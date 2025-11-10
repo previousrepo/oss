@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Run the docker container from recently created image and run that docker container to 5000 port of host system.
+
+CATEGORY: Docker Port Mapping
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker container execution
+- Port mapping to port 5000
+- Flask default port configuration
+- Container networking
+
+DELIVERABLES:
+- Running container on port 5000
+- Port mapping configuration
+- Accessible Flask application
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Flask Docker image
+- Web browser

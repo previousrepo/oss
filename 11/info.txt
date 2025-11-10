@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Create of RPM packages. (Multiple modules/code packaging of java). Pull or take any FOSS project and one feature and then create the package on suitable OS Compare RPM packaging with Debian packaging.
+
+CATEGORY: Package Management (RPM)
+DIFFICULTY: Beginner
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- RPM package creation
+- Java application packaging
+- SPEC file creation
+- RPM vs DEB comparison
+
+DELIVERABLES:
+- RPM package for Java application
+- SPEC file
+- Installation demonstration
+- Comparison document
+
+TOOLS REQUIRED:
+- RPM-based Linux (CentOS/RHEL/Fedora)
+- rpmbuild tool
+- Java JDK
+- FOSS Java project

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: api_server
+    networks:
+      - api_network
+    ports:
+      - "8000:8000"
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: api_client
+    depends_on:
+      - server
+    networks:
+      - api_network
+
+networks:
+  api_network:
+    driver: bridge

@@ -1,0 +1,25 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of Project Management tool: "SONARQUBE" for managing projects. Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare it with other Project Management tool.
+
+CATEGORY: Project Management & Code Quality
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- SonarQube installation and configuration
+- Code quality analysis
+- Bug detection and tracking
+- Technical debt management
+- Comparison with other PM tools
+
+DELIVERABLES:
+- SonarQube setup
+- Project analysis report
+- Code quality metrics
+- Comparison document
+
+TOOLS REQUIRED:
+- SonarQube
+- Java JDK
+- Database (PostgreSQL/MySQL)
+- Sample project for analysis

@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of online Project Management tool: "SONARcloud" for managing projects. Demonstrate the one foss project for code coverage, Detect Bugs & Vulnerabilities, Review Security Hotspots, Track Code Smells & fix your Technical Debt. Show the Code Quality Metrics & History. Compare it with other Project Management tool.
+
+CATEGORY: Cloud-based Code Quality Analysis
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- SonarCloud setup and integration
+- Code coverage analysis
+- Security vulnerability detection
+- Code smell identification
+- Technical debt tracking
+
+DELIVERABLES:
+- SonarCloud project setup
+- Analysis reports
+- Security and quality metrics
+- Comparison document
+
+TOOLS REQUIRED:
+- SonarCloud account
+- GitHub/GitLab/Bitbucket repository
+- CI/CD integration

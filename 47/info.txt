@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Write a python program to perform arithmetic operations and create Docker image accordingly.
+
+CATEGORY: Docker + Python
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Python application containerization
+- Dockerfile for Python
+- Command-line applications in Docker
+- Image building
+
+DELIVERABLES:
+- Python arithmetic program
+- Dockerfile
+- Built Docker image
+- Running container demonstration
+
+TOOLS REQUIRED:
+- Docker
+- Python
+- Text editor

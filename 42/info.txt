@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+With the help of Docker-compose deploy the 'Wordpress' and 'Mysql' container and access the front end of 'Wordpress'.
+
+CATEGORY: Docker Compose
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker Compose
+- Multi-container applications
+- WordPress deployment
+- MySQL database linking
+
+DELIVERABLES:
+- docker-compose.yml file
+- WordPress + MySQL deployment
+- Accessible WordPress frontend
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Docker Compose
+- Web browser

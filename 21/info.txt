@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of online Bug Tracking/management: "donedone". Take source code of any open source you like and find minimum three bugs (mention their type on answer sheet) in terms removing error/bug or adding feature to it. Bug tracking on any suitable open source (code) from internet. Compare code review with Bug tracking process. How bug tracking or code review improves the quality of code.
+
+CATEGORY: Bug Tracking System
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration + Analysis
+
+KEY CONCEPTS:
+- DoneDone bug tracking
+- Bug identification and classification
+- Code review vs bug tracking comparison
+- Quality improvement through tracking
+
+DELIVERABLES:
+- DoneDone account setup
+- Three identified bugs with classifications
+- Bug tracking workflow
+- Comparison and analysis document
+
+TOOLS REQUIRED:
+- DoneDone account
+- Open source project for analysis
+- Web browser

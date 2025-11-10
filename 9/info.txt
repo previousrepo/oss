@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Development of contribution to existing Open Source Software (on line upload of its git/svn repository with your valid login) (Language: java/pyth/perl/c/cpp/etc). Pull to your github the Open Source Software and contribute in terms removing error/bug or adding feature to it. Upload the contributed code your repository as well original FOSS.
+
+CATEGORY: Open Source Contribution
+DIFFICULTY: Beginner
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Forking open source projects
+- Contributing to FOSS
+- Pull request workflow
+- Code contribution best practices
+
+DELIVERABLES:
+- Forked repository on GitHub
+- Bug fix or feature addition
+- Pull request to original project
+- Documentation of contribution
+
+TOOLS REQUIRED:
+- Git and GitHub account
+- Programming language environment (Java/Python/Perl/C/C++)
+- Text editor or IDE

@@ -1,0 +1,22 @@
+PROBLEM STATEMENT:
+Demonstrate go Tools (any one).
+
+CATEGORY: Go Development Tools
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Go toolchain (go build, go test, go fmt, etc.)
+- Go tool usage and features
+- Development workflow with Go tools
+
+DELIVERABLES:
+- Demonstration of one Go tool
+- Usage examples
+- Output documentation
+- Best practices
+
+TOOLS REQUIRED:
+- Go compiler and toolchain
+- Sample Go project
+- Terminal

@@ -1,0 +1,8 @@
+Question 25: Create a container with nginx web server and create one more container with mysql
+
+This demonstrates:
+- Multi-container setup with Docker Compose
+- Nginx web server container
+- MySQL database container
+- Container networking
+- Volume persistence for MySQL data

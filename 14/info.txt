@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Create of Debian packages. (multiple modules/code packaging of java/c/cpp). Pull or take any FOSS project and one feature and then create the package on suitable OS Compare RPM packaging with Debian packaging.
+
+CATEGORY: Package Management (Debian)
+DIFFICULTY: Beginner
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Debian package creation for multiple languages
+- Multi-module packaging
+- debian/ directory structure
+- DEB vs RPM comparison
+
+DELIVERABLES:
+- DEB package for Java/C/C++ application
+- debian/ configuration files
+- Installation demonstration
+- Comparison document
+
+TOOLS REQUIRED:
+- Debian-based Linux
+- dpkg-dev, build tools
+- Java JDK, gcc/g++
+- FOSS project

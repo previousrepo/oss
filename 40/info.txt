@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Pull the LAMP Stack container from docker hub and host a web application of your own. Push that image back to repository. Make use of database.
+
+CATEGORY: Docker + LAMP Stack
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- LAMP stack containerization
+- Docker Hub operations
+- Web application deployment
+- Database integration
+
+DELIVERABLES:
+- LAMP container with custom application
+- Web application with database
+- Pushed Docker image
+- Running application demonstration
+
+TOOLS REQUIRED:
+- Docker
+- Docker Hub account
+- Web application (PHP/HTML)
+- MySQL database

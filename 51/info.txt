@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Create a simple Hello-world python flask application and create the docker image of that Flask application.
+
+CATEGORY: Docker + Flask
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Flask application development
+- Python containerization
+- Dockerfile creation
+- Image building and running
+
+DELIVERABLES:
+- Flask Hello World app
+- Dockerfile
+- Built Docker image
+- Running container
+
+TOOLS REQUIRED:
+- Docker
+- Python
+- Flask framework

@@ -1,0 +1,160 @@
+PROBLEM STATEMENT:
+Create the 'nginx' container from 'nginx' image. And create the load balancing so that if we go to the address of 'nginx' it can redirect it to the above created applications.
+
+CATEGORY: Docker + Load Balancing
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+=== WHAT IS LOAD BALANCING? ===
+
+Load balancing is distributing incoming network traffic across multiple servers to:
+1. Prevent any single server from being overwhelmed
+2. Improve application availability and reliability
+3. Scale applications horizontally (add more servers)
+4. Provide redundancy (if one server fails, others handle the load)
+
+Example: If you have 1000 users, instead of one server handling all 1000 requests,
+you can have 3 servers each handling ~333 requests.
+
+=== HOW NGINX HANDLES LOAD BALANCING ===
+
+Nginx acts as a "reverse proxy" - it sits in front of your application servers and:
+
+1. **Receives all incoming requests** from users
+2. **Decides which backend server** should handle each request
+3. **Forwards the request** to the chosen server
+4. **Returns the response** back to the user
+
+Load Balancing Algorithms:
+- **Round Robin** (default): Distributes requests evenly in rotation
+  Request 1 → Server A
+  Request 2 → Server B
+  Request 3 → Server C
+  Request 4 → Server A (cycle repeats)
+
+- **Least Connections**: Sends to server with fewest active connections
+- **IP Hash**: Same client always goes to same server (session persistence)
+- **Weighted**: Some servers get more traffic based on capacity
+
+=== NGINX CONFIGURATION BASICS ===
+
+```nginx
+upstream backend {
+    server app1:5000;  # Backend server 1
+    server app2:5000;  # Backend server 2
+    server app3:5000;  # Backend server 3
+}
+
+server {
+    listen 80;
+    
+    location / {
+        proxy_pass http://backend;  # Forward to backend servers
+    }
+}
+```
+
+This tells Nginx:
+- Listen on port 80
+- When request comes to "/", forward it to one of the backend servers
+- Use round-robin to distribute load
+
+=== DOCKER INTEGRATION ===
+
+In Docker, each container is like a separate server:
+
+Without Load Balancing:
+```
+User → App Container (port 5000)
+```
+Problem: If app crashes or gets too many requests, everything fails.
+
+With Load Balancing:
+```
+User → Nginx Container (port 80) → App Container 1 (port 5000)
+                                  → App Container 2 (port 5000)
+                                  → App Container 3 (port 5000)
+```
+Benefit: Traffic distributed, redundancy, scalability.
+
+=== DOCKER COMPOSE INTEGRATION ===
+
+Docker Compose makes this easy:
+
+1. **Create multiple instances** of your app using "scale"
+2. **Create Nginx container** with load balancing config
+3. **Connect via Docker network** - containers can talk by service name
+4. **Nginx automatically discovers** all app instances
+
+Example docker-compose.yml:
+```yaml
+services:
+  app:
+    image: flask-app
+    deploy:
+      replicas: 3  # Create 3 instances
+  
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+```
+
+Docker creates:
+- app_1 (internal IP: 172.18.0.2)
+- app_2 (internal IP: 172.18.0.3)
+- app_3 (internal IP: 172.18.0.4)
+- nginx (can reach all apps by service name "app")
+
+=== HOW IT WORKS STEP-BY-STEP ===
+
+1. **User opens browser** → http://localhost
+2. **Request hits Nginx** container on port 80
+3. **Nginx checks config** → sees "upstream backend" with 3 servers
+4. **Nginx picks a server** using round-robin (let's say app_2)
+5. **Nginx forwards request** to app_2:5000 internally
+6. **App_2 processes** the request and returns response
+7. **Nginx sends response** back to user
+8. **Next request** goes to app_3, then app_1, then app_2 again (cycle)
+
+=== BENEFITS IN DOCKER ===
+
+1. **High Availability**: If one container crashes, others still work
+2. **Easy Scaling**: Need more capacity? Just add more containers
+3. **Zero Downtime Updates**: Update containers one by one
+4. **Resource Optimization**: Distribute CPU/memory load
+5. **Health Checks**: Nginx can detect and skip unhealthy containers
+
+=== REAL-WORLD ANALOGY ===
+
+Think of a restaurant:
+- **Without load balancing**: One waiter serves all customers (gets overwhelmed)
+- **With load balancing**: Manager (Nginx) assigns customers to different waiters (app containers)
+  - Customer 1 → Waiter A
+  - Customer 2 → Waiter B
+  - Customer 3 → Waiter C
+  - Customer 4 → Waiter A (cycle)
+
+If Waiter B is sick (container crashes), Manager sends all customers to A and C.
+
+KEY CONCEPTS:
+- Nginx as reverse proxy and load balancer
+- Docker networking for container communication
+- Docker Compose for orchestration
+- Horizontal scaling with multiple containers
+- Round-robin distribution algorithm
+
+DELIVERABLES:
+- Nginx container with load balancing config
+- Multiple backend application containers
+- Docker Compose orchestration
+- Load balancing demonstration
+- Health check configuration
+
+TOOLS REQUIRED:
+- Docker
+- Docker Compose
+- Nginx
+- Flask/Node.js application (backend)

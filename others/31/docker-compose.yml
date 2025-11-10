@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: lamp-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: webapp
+      MYSQL_USER: webuser
+      MYSQL_PASSWORD: webpass
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - lamp-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  php-apache:
+    build: .
+    container_name: lamp-apache
+    ports:
+      - "8083:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      - DB_HOST=mysql
+      - DB_NAME=webapp
+      - DB_USER=webuser
+      - DB_PASS=webpass
+    networks:
+      - lamp-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+
+networks:
+  lamp-network:
+    driver: bridge
+
+volumes:
+  mysql-data:

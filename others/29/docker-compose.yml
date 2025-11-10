@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mediawiki-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mediawiki
+      MYSQL_USER: wikiuser
+      MYSQL_PASSWORD: wikipass
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - lamp-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mediawiki:
+    image: mediawiki:1.39
+    container_name: mediawiki-app
+    ports:
+      - "8080:80"
+    environment:
+      - MEDIAWIKI_DB_TYPE=mysql
+      - MEDIAWIKI_DB_HOST=mysql
+      - MEDIAWIKI_DB_NAME=mediawiki
+      - MEDIAWIKI_DB_USER=wikiuser
+      - MEDIAWIKI_DB_PASSWORD=wikipass
+    volumes:
+      - mediawiki-data:/var/www/html/images
+      # Uncomment the line below after creating LocalSettings.php
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+    networks:
+      - lamp-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: mediawiki-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: rootpass
+    networks:
+      - lamp-network
+    depends_on:
+      - mysql
+
+networks:
+  lamp-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+  mediawiki-data:

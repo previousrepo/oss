@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Run the Docker container from recently created image and run the container at port number 80 in host system.
+
+CATEGORY: Docker Port Mapping
+DIFFICULTY: Expert
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Docker container execution
+- Port mapping to host
+- Container networking
+- Service accessibility
+
+DELIVERABLES:
+- Running container on port 80
+- Port mapping demonstration
+- Accessible web application
+- Documentation
+
+TOOLS REQUIRED:
+- Docker
+- Docker image
+- Web browser

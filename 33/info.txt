@@ -1,0 +1,26 @@
+PROBLEM STATEMENT:
+Download the suitable version of kernel/linux code from distro/linux.org and add print statement and compile it and demonstrate the change kernel/print statement added.
+
+CATEGORY: Linux Kernel Development
+DIFFICULTY: Beginner
+TYPE: Practical Implementation
+
+KEY CONCEPTS:
+- Linux kernel source code
+- Kernel compilation
+- Kernel modification
+- Custom kernel installation
+
+DELIVERABLES:
+- Modified kernel source code
+- Compilation process documentation
+- Boot with custom kernel
+- Print statement demonstration
+
+TOOLS REQUIRED:
+- Linux system
+- Kernel source code
+- Build tools (gcc, make, etc.)
+- Sufficient disk space and time
+
+WARNING: Kernel compilation requires significant time and resources. Backup system before installing custom kernel.

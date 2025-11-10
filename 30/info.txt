@@ -1,0 +1,23 @@
+PROBLEM STATEMENT:
+Write a go program to demonstrate feature of go language (any one).
+
+CATEGORY: Programming (Go Language)
+DIFFICULTY: Beginner
+TYPE: Code Implementation
+
+KEY CONCEPTS:
+- Go language syntax
+- Go language features (goroutines, channels, interfaces, etc.)
+- Go program structure
+- Compilation and execution
+
+DELIVERABLES:
+- Go program demonstrating a feature
+- Source code with comments
+- Compilation and execution instructions
+- Feature explanation
+
+TOOLS REQUIRED:
+- Go compiler (golang)
+- Text editor or IDE
+- Linux/Unix terminal

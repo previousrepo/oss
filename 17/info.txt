@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Demonstrate the use/features of online Project Management tool: "ASANA" for managing projects. Demonstrate the one foss project for Project planning and scheduling/ Product roadmap and release planning/ Task management and team collaboration/ Agile and Scrum/Time tracking, cost reporting and budgeting/ Bug tracking on any suitable open source (code) from internet. Compare asana with phabricator.
+
+CATEGORY: Project Management
+DIFFICULTY: Beginner
+TYPE: Practical Demonstration
+
+KEY CONCEPTS:
+- Asana project management
+- Task and team collaboration
+- Agile/Scrum workflows
+- Project planning and tracking
+- Comparison with Phabricator
+
+DELIVERABLES:
+- Asana project setup
+- Task management demonstration
+- Team collaboration examples
+- Comparison document
+
+TOOLS REQUIRED:
+- Asana account (free tier)
+- Sample project
+- Team members for collaboration demo

@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:
+Configure and demonstrate the use of NIS and NFS. (on centos/rpm based OS VM/container) Show the imp steps and file name of configurations. Create 5 users and make two groups, demonstrate the NIS and NFS concepts by example on LAN connected linux os.
+
+CATEGORY: Network Services Configuration
+DIFFICULTY: Beginner
+TYPE: Practical Configuration
+
+KEY CONCEPTS:
+- NIS setup on CentOS
+- NFS configuration on RPM-based OS
+- User and group management across network
+- Shared filesystem demonstration
+
+DELIVERABLES:
+- NIS server and client configuration on CentOS
+- NFS server and client setup
+- 5 users in 2 groups demonstration
+- Configuration file documentation
+
+TOOLS REQUIRED:
+- CentOS/RHEL/Fedora (multiple machines or VMs)
+- NIS packages (ypserv, ypbind)
+- NFS packages (nfs-utils)
+- Network connectivity

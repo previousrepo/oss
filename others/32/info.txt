@@ -1,0 +1,7 @@
+Question 32: Create & Demonstrate the container of a particular distro and show all Dockerfile fields
+
+This demonstrates:
+- All Dockerfile instructions and fields
+- Multi-stage builds
+- Best practices for Dockerfile
+- Ubuntu-based container with comprehensive examples
